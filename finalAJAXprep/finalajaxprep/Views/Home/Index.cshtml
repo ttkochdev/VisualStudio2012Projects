@@ -1,0 +1,44 @@
+﻿<html>
+<head>
+<script>
+
+    function init() {
+        selectChange();
+    }
+
+    function selectChange() {
+        var data = '[{"eventId":"23121","title":"College Scholar Honors Program","date":"1402686000","url":"http:\/\/calendar.noctrl.edu\/eventDetail.php?id=23121"},{"eventId":"21031","title":"Go Away Day: Study Abroad Fair","date":"1414512000","url":"http:\/\/calendar.noctrl.edu\/eventDetail.php?id=21031"}]';
+
+        var xmlhttp;
+        if (window.XMLHttpRequest) {// code for IE7+, Firefox, Chrome, Opera, Safari
+            xmlhttp = new XMLHttpRequest();
+        }
+        else {// code for IE6, IE5
+            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+        xmlhttp.onreadystatechange = function () {
+            if (xmlhttp.readyState === 4 && xmlhttp.status === 200) {
+                console.log(xmlhttp.responseText);
+                var jsonResponse = JSON.parse(xmlhttp.responseText);
+                //var jsonResponse = xmlhttp.responseText;
+                console.log(JSON.parse(jsonResponse));
+
+                //may need to parse twice from apicontroller....not sure JSON methods in controller...just using string
+                document.getElementById("description").innerHTML = jsonResponse[0].eventId;
+                //document.getElementById("description").innerHTML = jsonResponse.Name; //GET
+            }
+        };
+        //xmlhttp.open("GET", "http://localhost:59258/api/Kid", true);
+        xmlhttp.open("POST", "http://localhost:59258/api/Kid", true);
+        xmlhttp.setRequestHeader('Content-Type', 'application/json');
+        xmlhttp.send(data);
+        //xmlhttp.send(); //get
+    }
+</script>
+</head>
+<body onload='init();'>
+<h1>test</h1>
+<div id="description"></div>
+
+</body>
+</html>

@@ -1,0 +1,5 @@
+C:\Users\tyler\Documents\Visual Studio 2012\Projects\NetAppClient\NetAppClient\bin\Debug\NetAppClient.exe.config
+C:\Users\tyler\Documents\Visual Studio 2012\Projects\NetAppClient\NetAppClient\bin\Debug\NetAppClient.exe
+C:\Users\tyler\Documents\Visual Studio 2012\Projects\NetAppClient\NetAppClient\bin\Debug\NetAppClient.pdb
+C:\Users\tyler\Documents\Visual Studio 2012\Projects\NetAppClient\NetAppClient\obj\Debug\NetAppClient.exe
+C:\Users\tyler\Documents\Visual Studio 2012\Projects\NetAppClient\NetAppClient\obj\Debug\NetAppClient.pdb
